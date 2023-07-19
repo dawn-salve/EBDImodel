@@ -1,0 +1,84 @@
+version: "2.0"
+
+intents:
+  - request_chitchat_greeting
+  - request_chitchat_faring
+  - trigger_unknown_what
+  - request_bullying_who
+  - request_unknown_who
+  - request_bullying_details
+  - request_unknown_details
+  - request_bullying_count
+  - request_bullying_location
+  - request_unknown_location
+  - request_bullying_duration
+  - request_unknown_duration
+  - request_bullying_frequency
+  - request_unknown_frequency
+  - request_unknown_when
+  - request_bullying_why
+  - request_unknown_why
+  - request_bullying_response
+  - request_unknown_response
+  - request_unknown_feeling
+  - request_bullying_confidant
+  - request_unknown_confidant
+  - request_bullying_parent
+  - confirm_bullying_summary
+  - request_school_start
+  - inform_unknown_positive
+  - inform_unknown_negative
+  - inform_goal_negative
+  - inform_goal_help
+  - ack_unknown_empathize
+  - ack_unknown_neutral
+  - ack_unknown_compliment
+  - ack_contactingkt_compliment
+  - request_goal_what
+  - request_goal_dream
+  - request_goal_feeling
+  - confirm_goal_summary
+  - confirm_goal_collaborate
+  - request_goal_howkt
+  - request_goal_howchild
+  - request_unknown_how
+  - request_confidant_who
+  - confirm_confidant_teacher
+  - confirm_confidant_parent
+  - request_confidant_when
+  - request_confidant_feeling
+  - request_confidant_why
+  - request_confidant_how
+  - inform_confidant_help
+  - inform_confidant_say
+  - request_confidant_say
+  - confirm_confidant_summary
+  - request_chitchat_end
+  - confirm_chitchat_satisfaction
+  - request_chitchat_goodbye
+  - ack_unknown_guilt
+  - ack_unknown_taunt
+  - EXTERNAL_reminder 
+
+slots:
+  training:
+    type: text
+    influence_conversation: false   
+
+actions:
+- action_use_bdi
+- action_set_reminder
+- action_react_to_reminder
+- action_forget_reminders
+- action_get_bdi
+
+responses:
+  utter_rephrase:
+  - text: "I don't understand what you mean."
+  - text: "What do you mean?"
+  - text: "What are you talking about?"
+
+
+session_config:
+  session_expiration_time: 60  # value in minutes
+  carry_over_slots_to_new_session: true

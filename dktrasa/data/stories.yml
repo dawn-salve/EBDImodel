@@ -1,0 +1,9 @@
+version: "2.0"
+
+stories:
+
+- story: bdi path
+  steps:
+  - intent: request_chitchat_greeting
+  - action: action_use_bdi
+#  - action: action_set_reminder

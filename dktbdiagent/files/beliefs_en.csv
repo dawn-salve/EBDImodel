@@ -1,0 +1,17 @@
+B1,Lilobot thinks he is in control,all phases,0.5
+B2,Lilobot thinks he is competent to solve problem,phase 4,0.3
+B3,Lilobot feels connected to the Kindertelefoon,all phases,0.3
+B4,Lilobot thinks KT can be trusted,phase 2,0.6
+B5,Lilobot thinks KT understands him ,all phases,0
+B6,Lilobot thinks KT is interested in his story,phase 2,0
+B7,Lilobot thinks KT can help him,phase 3,0.7
+B8,Lilobot thinks KT can solve his problem,phase 3,1
+B9,Lilobot thinks he has talked about his situation,phase 2,0
+B10,Lilobot thinks KT is asking about his wish,phase 3,0
+B11,Lilobot thinks KT is asking about a positive wish,phase 3,0
+B12,Lilobot thinks KT is asking about a confidant,phase 4,0
+B13,Lilobot thinks his teacher can help him ,phase 4,0.5
+B14,Lilobot feels safe in the conversation,all phases,1
+B15,Lilobot thinks KT wants to end the conversation,phase 5,0
+B16,Lilobot thinks he and KT will be able to reach a solution,phase 4,0
+B17,Lilobot thinks KT is going to solve the problem for him,phase 4, 0

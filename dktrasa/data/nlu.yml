@@ -1,0 +1,1518 @@
+version: "2.0"
+
+nlu:
+# phase 1 
+- intent: request_chitchat_greeting
+  examples: |
+    - Hello
+    - Hi
+    - Good morning
+    - Good evening
+    - Good afternoon
+    - Good day
+    - Hey, welcome aboard
+    - Welcome to the Child Helpline
+    - Welcome to the chat of the Child Helpline
+    - Welcome
+    - Hi, welcome
+    - Welcome to the chat
+    - I am [Lotte]{"entity": "name"} from the Child Helpline
+    - Hi, this is [Lotte]{"entity": "name"} from the Child Helpline
+    - Hi, I'm [Lotte]{"entity": "name"} from the Child Helpline
+    - Hi, this is [Lotte]{"entity": "name"}
+    - Hi, my name is [Lotte]{"entity": "name"}
+    - Hi, thank you for reaching out
+    - Hello, thank you for calling
+    - Hi, welcome here
+    - Hello, welcome here
+    - Hi there, thank you for reaching out
+
+- intent: request_chitchat_faring
+  examples: |
+    - How are you?
+    - How are you doing?
+    - How's it going?
+    - How are you doing recently?
+    - How are you recently?
+    - How's it going recently?
+    - How have you been recently?
+    - Is everything good with you?
+    - Is everything going well?
+    - Everything good?
+    - How have you been?
+    - What's new?
+    - How's everything going?
+    - How's your day been so far?
+    - How have things been going for you?
+    - How are you feeling today?
+    - Is everything alright with you?
+    - How's your week been?
+    - How's your weekend going?
+    - How's everything?
+    - How are things going on your side?
+    - How have you been lately?
+
+# phase 2
+- intent: trigger_unknown_what
+  examples: | 
+    - Do you want to ask or tell me something?
+    - Do you want to ask me something?
+    - Do you want to tell me something?
+    - Do you have something to tell me?
+    - What do you want to ask?
+    - What do you want to talk about?
+    - What do you want to discuss?
+    - What's troubling you?
+    - What would you like to share?
+    - What's bothering you?
+    - Tell me what's going on.
+    - Can you tell me what's going on?
+    - What's the matter?
+    - What do you want to say then?
+    - Please tell me, I'm listening to you.
+    - I'm happy to listen to you.
+    - How can I assist you?
+    - Tell me.
+    - Go ahead and tell me.
+    - Tell me more.
+    - Do you want to share more about it?
+    - Do you want to share more or ask something?
+    - What's not going so well?
+    - Just tell me.
+    - What do you want to discuss with me?
+    - About what?
+    - Do you want to ask me or tell me something?
+    - What do you want to talk about?
+    - How can I help you?
+    - What can I do for you?
+    - Is there anything else you need help with?
+    - Do you need help with anything?
+    - Do you need assistance with anything?
+    - What do you want to share?
+    - Please tell me.
+    - Is something wrong?
+    - Please tell me what's wrong.
+    - Do you want to tell me what's going on?
+    - Do you want to tell me what's wrong?
+    - Do you want to tell me what's bothering you?
+    - Do you want to talk about what's bothering you?
+    - Do you want to talk about what's wrong?
+    - Do you want to talk about a problem?
+    - Do you want to share about a problem?
+    - Can you tell me why you are contacting me?
+    - Is there something specific you'd like to discuss?
+    - Is there anything on your mind?
+    - Is there something you'd like to get off your chest?
+    - Are you looking for advice or guidance?
+    - Do you have any questions you'd like to ask?
+    - Is there a topic you'd like to explore?
+    - What's on your agenda for today?
+    - Is there something you'd like to delve into?
+    - Is there an issue you'd like to address?
+    - What's the main focus of our conversation?
+    - Is there a particular subject you'd like to touch upon?
+    - Is there a specific matter you'd like to raise?
+    - Is there something that requires attention or discussion?
+    - Do you have any concerns you'd like to share?
+    - Is there anything you'd like to clarify or elaborate on?
+    - Do you need assistance with a particular matter?
+    - Is there a specific area you'd like me to assist you with?
+    - Do you require help in any specific aspect?
+    - Is there something you're seeking guidance on?
+    - Is there anything else you'd like to bring up or discuss?
+    - Is there another topic you'd like to address before we conclude?
+    - Is there anything else you'd like to share with me?
+    - Is there any additional information or questions you have?
+    - Is there something else you'd like to cover during our conversation?
+    - Is there any particular aspect you'd like to explore further?
+    - Is there another angle you'd like to approach the discussion from?
+    - Is there anything else you'd like to talk about or inquire about?
+    - Is there any specific reason for reaching out to me?
+    - Is there a particular purpose or intention behind your communication?
+    - Is there something specific you would like to achieve through our conversation?
+    - Is there a particular matter you would like to address or discuss with me?
+    - Is there a specific objective or outcome you have in mind for our discussion?
+    - Is there something you'd like to express or seek guidance on?
+
+- intent: request_bullying_who
+  examples: | 
+    - who is bullying you?
+    - who is causing you to be bullied?
+    - who is bullying you at school?
+    - who are the bullies?
+    - who hit you?
+    - Can you tell me who's been bothering you?
+    - Do you know the names of the people involved in the bullying?
+    - Who specifically is bullying you?
+    - Who are the people responsible for bullying you?
+    - Can you describe the bullies who hit you?
+
+- intent: request_unknown_who
+  examples: |
+    - by who?
+    - who is doing that?
+    - who is doing that then?
+    - who does it?
+    - who is doing it to you?
+
+- intent: request_bullying_details
+  examples: |
+    - can you tell me more about your situation first?
+    - Can you tell me more about the bullying?
+    - Could you provide more details about your situation?
+    - I would appreciate it if you could share more information about the bullying.
+    - Could you give me further insights into the bullying you're experiencing?
+    - It would be helpful if you could elaborate on the bullying situation.
+    - Can you expand on the details of your current situation?
+    - I'd like to better understand the specifics of the bullying. Could you provide more information?
+    - Would you mind sharing more about the bullying incidents?
+    - Could you provide additional context about the bullying?
+    - Could you give me a deeper understanding of the bullying you're experiencing?
+    - Feel free to share more about the bullying so that I can better assist you.
+    - I'd like to gather more information about the bullying. Can you provide more details?
+    - Please feel free to tell me everything you're comfortable sharing about the bullying.
+    - Can you give me a more comprehensive account of the bullying you're facing?
+    - Can you provide more insight into the bullying incidents?
+    - Can you share more about the specifics of the bullying situation?
+    - Can you tell me more about the bullying you've encountered?
+    - Can you provide more information about the bullying you're facing?
+
+- intent: request_unknown_details
+  examples: | 
+    - what exactly are they doing?
+    - what exactly happened?
+    - what's happening?
+    - what happened?
+    - what exactly are they doing to you?
+    - what are they saying?
+    - what are they doing?
+    - can you tell me more about it?
+    - what are those boys doing?
+    - what's going on?
+    - what are they doing then?
+    - can you tell me more about the bullying?
+    - how did it go the last time?
+
+- intent: request_bullying_count
+  examples: |
+    - how many boys?
+    - how many of them are there?
+    - how many are they?
+
+- intent: request_bullying_location
+  examples: |
+    - where do they bully you?
+    - where does this bullying incident occur?
+    - are you being bullied at school?
+    - where are you experiencing this problem?
+    - are you being bullied on the schoolyard?
+    - are you being bullied in the classroom?
+    - are you being bullied on the way to school?
+    - are you being bullied on the way home?
+    - are you being bullied outside?
+    - are you being bullied inside?
+    - are they bullying you outside?
+    - are they bullying you at school?
+    - are they bullying you outside of school?
+    - are they bullying you in the classroom?
+    - do you know where they mostly bully you?
+    - do you know where they bully you?
+    - where are they bullying you?
+    - where are they mostly bullying you?
+    - where are you mostly being bullied?
+    - where are you frequently being bullied?
+    - what is the location where you are often bullied?
+    - are you often bullied at school?
+    - are you mostly bullied at school?
+    - does this problem occur in the classroom?
+    - does bullying occur in the classroom?
+    - where do you experience this problem?
+    - where do you experience bullying?
+    - does bullying occur at school?
+    - does bullying occur outside of school?
+    - where do you experience your problem?
+    - where are you being bullied?
+    - where is the place where you are being bullied?
+    - where do you know them from?
+
+- intent: request_unknown_location
+  examples: |
+    - where did this happen?
+    - where is this happening?
+    - where did this happen?
+    - where do they do this?
+    - and where does that happen?
+    - where do they do this?
+    - does this occur in the classroom?
+    - where are they bothering you?
+    - where are they bothering you?
+    - does this happen at school?
+    - does that happen at school?
+    - does it happen in the classroom?
+    - where does this occur?
+    - where?
+
+- intent: request_bullying_duration
+  examples: |
+    - How long have you been bullied?
+    - When did the bullying start?
+    - Since when have you had this problem?
+    - How long have they been bullying you?
+    - How long have you been getting bullied?
+    - Have you been bullied for a long time?
+    - Since when have you been bullied?
+    - When did this problem start?
+    - When was the first occurrence of bullying?
+    - When was the first occurrence of the problem?
+    - How long have they been bullying you for?
+    - Do you know when they started bullying you?
+    - Do you have any idea when the bullying started?
+    - When did you first start experiencing bullying?
+    - Do you remember when the bullying started?
+    - Do you remember when they first started bullying you?
+    - Do you remember when your problem started?
+    - How long do you think you've been bullied for?
+    - When were you first bullied?
+    - When did this problem first arise?
+    - Have you been bullied for a while now?
+    - Have you been dealing with this problem for a long time?
+    - Have you been experiencing bullying for a long time?
+    - Has this problem been going on for a while now?
+    - Has the bullying been going on for a while now?
+    - Since when have they been bullying you?
+    - Do you know when the bullying started?
+    - How long ago were you first bullied?
+    - How long ago did the problem first occur?
+    - Since when have you been struggling with this problem?
+    - Since when have you been dealing with this problem?
+    - Since when have they been bullying you?
+    - Can you provide me with an estimate of how long the bullying has been going on?
+    - Do you have an approximate timeline of when the bullying started?
+    - Have you noticed any specific period when the problem began?
+    - Can you recall when the bullying incidents first occurred?
+    - Do you have any sense of how long you've been facing bullying?
+    - Has the bullying been ongoing for a considerable period of time?
+    - Do you have an idea of when the bullying initially started?
+    - Can you remember when the problem of bullying first arose?
+    - How long do you believe you have been a target of bullying?
+    - Can you provide any information on when the bullying might have started?
+    - Can you provide an estimation of when the bullying behavior began towards you?
+    - Do you recall the approximate timeframe when the bullying episodes commenced?
+    - How long has it been since you first experienced bullying?
+    - When did you first become aware of this problem?
+    - Can you provide any insights into when the bullying first began happening to you?
+    - Can you remember when the bullying incidents first took place?
+    - Do you recall when the bullying behavior was first directed at you?
+    - Can you recall when the problem you're facing initially emerged?
+    - How long ago do you think the bullying instances started?
+    - When did you first encounter bullying?
+    - When did this problem first come to your attention?
+    - Have you been dealing with this problem for an extended period of time?
+    - Have you been facing bullying for a significant duration?
+    - Have you been experiencing bullying for quite some time now?
+    - Has this problem persisted for a considerable amount of time?
+    - Has the bullying behavior been ongoing for an extended period?
+    - Since when have they started targeting you with bullying behavior?
+    - Do you have any recollection of when the bullying began?
+    - How long ago did you first experience being bullied?
+    - How long ago did the problem first arise?
+    - Since when have you been struggling with this problem?
+    - Since when have you been grappling with this issue?
+    - Since when have they been engaging in bullying behavior towards you?
+
+- intent: request_unknown_duration
+  examples: |
+    - How long has this been happening?
+    - How long have you been dealing with this?
+    - Since when have you been struggling with this?
+    - How many weeks have you been experiencing this?
+    - How long has this been going on?
+    - When did this start?
+    - How long have you been experiencing this problem?
+    - Do you know how long this has been going on?
+    - How long has this been happening for?
+    - Since when has this been happening?
+    - Since when has this been going on?
+    - Can you provide an estimate of the duration of this situation?
+    - How long have you been facing this issue?
+    - Since when have you been grappling with this?
+    - Can you approximate the number of weeks you've been dealing with this?
+    - How long has this been occurring?
+    - When did this problem initially start?
+    - How long have you been experiencing this particular problem?
+    - Do you have any idea how long this has been happening?
+    - How long has this situation been going on for?
+    - Since when did this issue begin?
+    - Since when has this been happening?
+    - Since when has this been ongoing?
+
+- intent: request_bullying_frequency
+  examples: |
+    - How often do you get bullied?
+    - How often do they bully you?
+    - Do they bully you often?
+    - Do they bully you frequently?
+    - Are you bullied often?
+    - When do they usually bully you?
+    - When are you usually bullied?
+    - When are you normally bullied?
+    - Is there a specific time when they bully you frequently?
+    - Do you know how often they bully you?
+    - Do you know when you are bullied?
+    - Do they bully you every day?
+    - Do they bully you on a daily basis?
+    - Do they bully you every school day?
+    - Does this problem occur every day?
+    - Does this problem occur every school day?
+    - Do they bully you every week?
+    - How often does this problem occur?
+    - How often does the bullying occur?
+    - How often does this happen?
+    - Are you regularly bullied?
+    - Do you regularly experience bullying?
+    - Do you regularly experience this problem?
+    - Do they repeatedly bully you?
+    - Does it happen often that you are bullied?
+    - Does this problem occur frequently?
+    - Does this problem occur often?
+    - Does this problem occur regularly?
+    - Do they bully you frequently?
+    - Do you often experience bullying at school?
+    - How frequently do you find yourself being bullied?
+    - Can you provide an estimate of how often they engage in bullying behavior towards you?
+    - Do you notice a pattern of frequent bullying incidents?
+    - Are you subjected to bullying on a regular basis?
+    - How often do you experience bullying?
+    - At what times or intervals do they typically bully you?
+    - Can you pinpoint specific occasions when you are most commonly bullied?
+    - Are there particular instances or times when you are usually targeted for bullying?
+    - Do you notice a recurring pattern of frequent bullying occurrences?
+    - Do you have a sense of how often they target you with bullying behavior?
+    - Are you aware of the frequency with which you are bullied?
+    - Do they engage in bullying behavior with you every day?
+    - Is bullying a daily occurrence for you?
+    - Do they target you for bullying specifically on school days?
+    - Does this problem manifest itself on a daily basis?
+    - Is bullying a regular event in your life, happening every day?
+    - Is there a weekly frequency to the bullying incidents?
+    - How often does this problem arise in your life?
+    - How frequently does the bullying take place?
+    - How often does this situation occur?
+    - Are you frequently subjected to bullying?
+    - Is experiencing bullying a common occurrence for you?
+    - Is this problem something you regularly face?
+    - Do they repeatedly engage in bullying behavior towards you?
+    - Does it happen on a frequent basis that you are bullied?
+    - Does this problem occur frequently in your life?
+    - Does this problem occur often in your daily experiences?
+    - Does this problem occur with regularity in your life?
+    - Do they engage in frequent bullying behavior towards you?
+    - Do you often experience bullying at school?
+
+- intent: request_unknown_frequency
+  examples: |
+    - How often does this happen?
+    - Does this happen often?
+    - Do they do that often?
+    - Does that happen often?
+    - Do you experience this often?
+    - When does this mainly happen?
+    - When does this occur?
+    - How often does this happen every week?
+    - How often does this occur?
+    - Do they do that frequently?
+    - Do you often experience this?
+    - Do you experience this regularly?
+    - What is the frequency of this occurrence?
+    - Is this a common happening?
+    - How often do they engage in this behavior?
+    - Is this a frequent event?
+    - Do you encounter this situation often?
+    - When is this most likely to happen?
+    - Can you provide an estimate of how often this occurs?
+    - How frequently does this happen on a weekly basis?
+    - How often does this situation arise?
+    - Is this something they do frequently?
+    - Do you frequently experience this?
+    - Is this something you regularly encounter?
+    - Do you encounter this on a regular basis?
+    - Is this a recurring event?
+    - How often does this occur in your experiences?
+    - Does this happen frequently?
+    - Do they engage in this behavior often?
+    - Do you often find yourself in this situation?
+    - Is this something you regularly go through?
+
+- intent: request_unknown_when
+  examples: |
+    - When was the last time this happened?
+    - When did this happen?
+    - When could you do that?
+    - When was the last time this occurred?
+    - Can you recall the most recent occurrence of this?
+    - When was the last time this took place?
+    - When did this incident happen?
+    - When was the most recent instance of this?
+    - Can you remember when this last occurred?
+    - Do you know the timeframe of the last occurrence of this?
+    - When was the most recent occurrence of this situation?
+    - Can you provide the date or time when this happened?
+    - When was the last time you experienced this?
+    - Can you recall the specific moment when this last took place?
+    - When was the most recent occurrence of this event?
+
+- intent: request_bullying_why
+  examples: |
+    - Why are they bullying you?
+    - Do you know why they are bullying you?
+    - What is the cause of the problem?
+    - Do they say why they are bullying you?
+    - Do you have an idea why they are bullying you?
+    - Do you know the cause of the problem?
+    - Do they have a reason to bully you?
+    - Do you think they have a reason to bully you?
+    - Do you think you know why they are bullying you?
+    - Has anyone ever told you why they are bullying you?
+    - What could be causing you to be bullied?
+
+- intent: request_unknown_why
+  examples: |
+    - Do you know why they do that?
+    - Why do they do that?
+    - How did this happen?
+    - Do you know how it happened?
+    - Do you know the cause?
+    - Do they let you know why?
+    - Do they say why they do that?
+    - Do you know why that happens?
+    - Do you have any idea why they do that?
+    - Has anyone ever said why they do that?
+    - How could that happen?
+    - Do you understand why?
+    - What is the reason?
+    - Why don't you?
+    - Why?
+
+- intent: request_bullying_response
+  examples: |
+    - What do you do if you are being bullied?
+    - What do you do if they bully you?
+    - What have you tried to make yourself feel a little better?
+    - Have you tried anything to make it stop?
+    - How do you respond when you're being bullied?
+    - What actions do you take if they bully you?
+    - Have you attempted any strategies to help improve your well-being in this situation?
+    - Have you tried any approaches to address or stop the bullying?
+    - What steps have you taken to cope with the bullying?
+    - How have you tried to handle or manage the situation?
+    - Have you explored any methods to make yourself feel more comfortable or secure?
+    - What measures have you taken to address the issue and find relief?
+    - Have you sought any support or assistance to deal with the bullying?
+- intent: request_unknown_response
+  examples: |
+    - What do you do if something like that happens?
+    - What do you do in that situation?
+    - How do you react if something like that happens?
+    - What have you tried so far?
+
+- intent: request_unknown_feeling
+  examples: |
+    - How do you feel about that?
+    - How does that feel for you?
+    - What do you feel then?
+    - How would you feel about that?
+    - What do you think then?
+    - How would it be for you?
+    - How would that feel?
+    - How is that for you?
+    - How would you feel if you were no longer being bullied?
+    - What would you notice?
+    - Would you feel differently?
+    - How would that be for you?
+    - How does that feel for you?
+    - Would others notice anything about you?
+    - What would you feel differently?
+    - How would that be?
+    - How would that feel for you?
+    - How do you feel about that?
+    - How would you feel about that?
+    - How would you feel differently?
+    - What would you notice?
+    - Would others notice that you feel differently?
+    - How would it be when you have achieved your goal?
+    - How would that make you feel?
+    - What would be different?
+    - How does it feel for you to be bullied like this?
+    - How would you feel about that?
+    - What do you think when they do that?
+
+- intent: request_bullying_confidant
+  examples: |
+    - Have you told anyone that you're being bullied?
+    - Have you told anyone other than me about your bullying situation?
+    - Has anyone else been made aware of your bullying situation?
+    - Does anyone else know about this problem?
+    - Have you confided in anyone else about being bullied?
+    - Does anyone at school know about this problem?
+    - Have you spoken to anyone else about being bullied?
+    - Who else knows that you're being bullied?
+    - Have you told anyone other than me that you're being bullied?
+    - Has anyone else been made aware that you're being bullied?
+    - Is there anyone at your school who is aware of this problem?
+    - Have you let anyone else know that you're being bullied?
+    - Have you discussed this problem with anyone else?
+    - Have you talked about being bullied with anyone else?
+    - Have you disclosed your experience of being bullied to anyone?
+    - Have you shared this bullying situation with anyone besides me?
+    - Are there other individuals who are aware of your bullying circumstances?
+    - Has anyone else been informed about the problem you're facing?
+    - Have you confided in anyone else regarding the bullying?
+    - Are there other people at school who know about this issue?
+    - Have you sought support or guidance from anyone else about being bullied?
+    - Who else is aware of your situation with bullying?
+    - Have you reached out to anyone else apart from me about being bullied?
+    - Has anyone else been informed or notified about the bullying?
+    - Are there individuals at your school who are aware of this problem?
+    - Have you discussed your experience of being bullied with anyone else?
+    - Have you engaged in conversations with others about being bullied?
+
+- intent: request_unknown_confidant
+  examples: |
+    - Have you told anyone about this?
+    - Have you told anyone other than me?
+    - Who else knows about this?
+    - Does anyone else know about this?
+    - Does anyone at school know about this?
+    - Is there anyone who knows that this is happening?
+    - Have you talked to anyone else about this?
+    - Have you confided in anyone about this?
+    - Who is aware of this?
+    - Have you discussed this with anyone else?
+    - Has anyone witnessed this happening?
+    - Have you told anyone about it?
+    - Is anyone else aware of this?
+    - Have you let anyone else know about this?
+    - Who have you told about this?
+    - Have you talked to anyone about this?
+    - Have you confided in anyone at school about this?
+    - Does your teacher know about this?
+    - Have you shared this with anyone?
+    - Besides me, have you disclosed this to anyone else?
+    - Who else is aware of this situation?
+    - Is there anyone else who knows about this?
+    - Have you informed anyone at school about this?
+    - Are there individuals who are aware that this is happening?
+    - Have you sought guidance from someone else about this?
+    - Have you confided in anyone regarding this matter?
+    - Who else has knowledge of this?
+    - Have you had conversations with others about this?
+    - Has anyone witnessed these incidents occurring?
+    - Have you confided in anyone about it?
+    - Is there anyone else who is aware of this situation?
+    - Have you shared this information with anyone else?
+    - Who else have you informed about this?
+    - Have you spoken to anyone about this matter?
+    - Have you confided in anyone at school about this issue?
+    - Is your teacher aware of what's happening?
+
+- intent: request_bullying_parent
+  examples: |
+    - Have you told your parents about this?
+    - Do your parents know about this?
+    - Does your father know that you're being bullied?
+    - Have you told your mother about this?
+    - Have your parents been made aware of this?
+    - Have you discussed this with your parents?
+
+- intent: confirm_bullying_summary
+  examples: |
+    - So, you were bullied at school yesterday, is that correct?
+    - If I understand correctly, you're being bullied at school, is that right?
+    - You're telling me that you're being bullied, is that correct?
+    - If I understand correctly, you're being bullied at school and you want to go to another school, is that right?
+
+- intent: request_school_start
+  examples: |
+    - have you started at this school this academic year?
+    - since when have you been at this school?
+
+- intent: inform_unknown_positive
+  examples: |
+    - I can do that
+    - I can manage that
+    - I can
+    - yes
+    - sure
+    - no problem
+    - I'll do it
+    - ok
+    - I can call tomorrow
+    - I'm capable of doing that.
+    - I'm able to handle that.
+    - I have the ability to do it.
+    - Absolutely.
+    - Certainly.
+    - It's not a problem.
+    - I'll take care of it.
+    - Alright.
+    - I can give you a call tomorrow.
+    - I can make a phone call tomorrow.
+
+- intent: inform_unknown_negative
+  examples: |
+    - No
+    - Unfortunately, that's not possible
+    - I'm sorry, but I can't fulfill that request.
+    - I'm afraid that's not something I can do.
+    - Unfortunately, I don't have the capability to do that.
+    - I apologize, but it's beyond my capabilities.
+    - I'm sorry, but I'm not programmed to handle that.
+    - I'm sorry, but that's outside of my abilities.
+    - Unfortunately, I'm not able to accommodate that.
+    - I'm afraid I can't do that for you.
+
+- intent: inform_goal_negative
+  examples: |
+    - No
+    - The Kindertelefoon does not call your school
+    - We cannot contact your school, unfortunately
+    - We cannot call your school, unfortunately
+    - We don't do that
+    - We can't do that, unfortunately
+    - That's not possible, unfortunately
+    - I can't talk to your school
+    - The Kindertelefoon can't call your school
+    - We don't contact schools
+    - We can't make that happen, unfortunately
+    - No, that's not possible
+    - That's not going to work, unfortunately
+    - No, we can't do that
+    - I can't do that
+    - Unfortunately, I can't do that
+    - The Kindertelefoon doesn't discuss you with anyone else
+    - We can't help with that
+    - Regrettably, we do not have the ability to contact your school.
+    - Unfortunately, we are unable to initiate communication with your school.
+    - We are unable to make calls to your school, I'm afraid.
+    - Contacting your school is not within our scope of action.
+    - Regrettably, we cannot fulfill that request.
+    - I'm sorry, but we don't have the capacity to talk to your school.
+    - The Kindertelefoon is not authorized to reach out to your school.
+    - Our policy prohibits us from discussing your situation with anyone else, including your school.
+    - We are unable to assist with that particular matter.
+    - Unfortunately, we are not able to offer support in that regard.
+    - No, it is not possible for us to fulfill that request.
+    - I'm sorry, but that approach is not feasible.
+    - I regret to inform you that we are unable to fulfill your request.
+    - I apologize, but I am unable to perform that task.
+    - Unfortunately, I do not have the capability to fulfill your request.
+    - It is against our policy to discuss your personal information with anyone else, including your school.
+    - We are unable to provide assistance in that specific matter.
+
+- intent: inform_goal_help
+  examples: |
+    - I can talk to you
+    - I can help you by talking
+    - I'd like to talk to you
+    - I can empathize with you
+
+- intent: ack_unknown_empathize
+  examples: |
+    - oh, how unfortunate
+    - oh, that sounds unpleasant
+    - what a bummer for you
+    - that must be very frustrating
+    - that doesn't sound nice
+    - I can imagine
+    - what a difficult situation for you
+    - that's not good
+    - oh dear
+    - that would be very nice, I think, for you
+    - I understand that you find it unpleasant
+    - I can understand that it's difficult for you
+    - that's understandable
+    - that sucks
+    - what a shame
+    - I can see that it's hard for you
+    - that's harsh
+    - that's intense
+    - what terrible news that you're being bullied
+    - that sounds terrible
+    - what a tough situation
+    - how terrible that they treat you that way
+    - that seems very frustrating
+    - that's often
+    - I can see it on your face
+    - I understand that you want me to call your school
+    - you sound sad
+    - it's a difficult question
+    - I understand that you're disappointed
+    - what an awful situation
+    - Oh, that's unfortunate to hear.
+    - Oh, that sounds really unpleasant.
+    - What a bummer for you to go through that.
+    - It must be very frustrating for you.
+    - That doesn't sound nice at all.
+    - I can imagine how difficult that must be.
+    - What a challenging situation for you.
+    - Oh dear, that's not good.
+    - That would be very nice, I think, if it could be resolved for you.
+    - I understand that you find it unpleasant.
+    - I can understand that it's tough for you.
+    - That's understandable given the circumstances.
+    - That really sucks.
+    - What a shame that you have to deal with this.
+    - I can see that it's hard for you.
+    - That's a harsh reality to face.
+    - That's intense, and I'm sorry you're experiencing it.
+    - What terrible news to hear that you're being bullied.
+    - That sounds absolutely terrible.
+    - What a tough situation you're in.
+    - How terrible that they treat you that way.
+    - That seems incredibly frustrating.
+    - It sounds like it happens often, which is tough.
+    - I can see it on your face that you're upset.
+    - I understand that you want me to contact your school.
+    - You sound really sad about it.
+    - It's a difficult question to answer.
+    - I understand that you're feeling disappointed.
+    - What an awful situation for you to be in.
+    - If I understand correctly, you feel powerless in this situation?
+
+- intent: ack_unknown_neutral
+  examples: |
+    - That's good to hear
+    - I can see it in your face
+    - That's good, okay
+    - That's good
+    - I understand that
+    - I understand
+    - I get that
+    - How nice
+
+- intent: ack_unknown_compliment
+  examples: |
+    - That's really good of you
+    - That's a great idea, I think
+    - Good idea
+    - I think that's clever of you
+    - I think that's brave of you
+    - How brave of you
+    - How clever of you
+    - Well done
+    - You can be proud of that
+    - You did well
+    - I'm proud of you
+    - Impressive
+    - Keep up the good work
+    - Impressive job
+    - I think you're doing well
+    - You should be proud of yourself
+    - Good that you said that
+    - How clever of you to tell me this
+    - That's smart of you
+    - That's a good solution
+    - What a good solution
+    - What a great idea
+    - How brave of you to tell me this
+    - That seems like a really good idea
+    - Smart move
+    - Good job
+    - You can be proud of your idea
+    - How smart of you!
+    - Impressive that you told me!
+    - Impressive that you came up with this
+    - That's a good start
+    - Good that you dare to tell this
+    - How good of you to dare to tell this
+    - That's a very good idea
+    - That's a great solution
+    - I think it would be very nice for you if you're no longer bullied
+    - Very good of you
+    - It would be very nice for you if you feel safe
+    - How great to hear that
+    - I think it would be very nice for you if you can feel safe at school
+    - Nice to know what you want
+    - Good to know what you want in this conversation
+    - Impressive how you talk about it
+
+- intent: ack_contactingkt_compliment
+  examples: |
+    - Good that you're contacting the Kindertelefoon
+    - That's great that you're contacting the Kindertelefoon
+    - Nice that you're chatting with us
+    - Good that you found us
+    - Good that you're contacting us
+    - That's great that you're coming to talk
+    - Glad that you're here
+    - That's great that you're chatting about it
+    - Nice that you're chatting with us
+    - Nice that you're talking to us
+    - Good that you dare to talk about it
+    - Good that you dare to chat about it
+    - That's great that you contacted us
+    - Good that you're contacting the Kindertelefoon
+    - Glad that you found us
+    - I'm glad you contacted us
+    - I'm glad you contacted the Kindertelefoon
+    - Very good that you're chatting with us
+    - Impressive that you're here
+    - Impressive that you're chatting
+    - That's great that you're chatting
+
+# phase 3
+- intent: request_goal_what
+  examples: |
+    - What would you like most?
+    - What would you like?
+    - What do you hope will be different as a result of this conversation?
+    - What do you hope will change as a result of this conversation?
+    - What would you like for yourself?
+    - What are you hoping for?
+    - What would you like to be different?
+    - What do you hope will be different as a result of this conversation?
+    - What are you hoping for in this conversation?
+    - What would you like?
+    - What do you want to change?
+    - What do you want?
+    - What do you want to achieve with this conversation?
+    - What do you want to accomplish with this conversation?
+    - What is your goal?
+    - What do you want now?
+    - What would you like?
+    - What do you want to be different?
+    - What do you want?
+    - What would you like to see changed?
+    - What would you like to change?
+    - What do you want to achieve with this conversation?
+    - What are you striving for?
+    - What do you hope to see change?
+    - What would you like?
+    - What do you want the most?
+    - What goal do you want to achieve with this conversation?
+    - What goal do you want to reach?
+    - What is the goal you want to achieve with this conversation?
+    - What is the goal you want to reach?
+    - What goal are you hoping to achieve?
+    - What goal do you prefer to achieve?
+    - What is the goal you would like to achieve the most?
+    - What would you like to achieve?
+    - What do you hope to achieve?
+    - What goal do you want to achieve?
+    - What goal are you hoping to accomplish?
+    - What would you like now?
+    - What are you hoping for?
+    - What is your greatest desire?
+    - What are your wishes?
+    - What outcomes are you hoping for from this conversation?
+    - What changes are you envisioning as a result of our discussion?
+    - What are your aspirations for yourself?
+    - What are you hoping to achieve?
+    - What specific changes would you like to see?
+    - What are your desired outcomes from this conversation?
+    - What do you seek or want to accomplish?
+    - What is your primary goal?
+    - What are you aiming for?
+    - What do you want to achieve through this conversation?
+    - What do you hope to accomplish through this dialogue?
+    - What is your ultimate objective?
+    - What is your current desire?
+    - What are your personal preferences?
+    - What specific changes do you want to make?
+    - What do you want to attain?
+    - What changes do you hope to witness?
+    - What changes do you wish to bring about?
+    - What specific outcomes are you striving for?
+    - What are your desired outcomes?
+    - What do you want the most?
+    - What is your main goal for this conversation?
+    - What goal are you seeking to reach?
+    - What is the most important goal you want to achieve through this conversation?
+    - What is the primary goal you wish to accomplish?
+    - What goal are you hoping to achieve?
+    - What goal is your top priority?
+    - What do you want to achieve?
+    - What are your hopes for what you can achieve?
+    - What goal are you aiming to accomplish?
+    - What goal do you want to fulfill?
+    - What is your current desire or wish?
+    - What are you hoping for in this situation?
+
+- intent: request_goal_dream
+  examples: |
+    - What would you love to have happen when you wake up tomorrow?
+    - If the problem disappeared tomorrow, what would be different?
+    - If bullying disappeared, what would your school day look like?
+    - If the bullies were gone tomorrow, what would be different?
+    - What do you want the most?
+    - If you were the boss of the school, what would you do?
+    - What would you like school to be like?
+    - What does your ideal school day look like?
+    - Imagine you are happy at school, what happens?
+    - What is the classroom like when you feel happy?
+    - Tell me how you would like it to be in the classroom.
+    - How do you want it to be at school?
+    - Have you ever been happy in the classroom before?
+    - How would it be at school then?
+
+- intent: request_goal_feeling
+  examples: |   
+    - What would you notice about yourself?
+    - What would others see in you?
+    - What would it mean for you?
+    - What would that give you?
+    - What would it feel like if they stop?
+    - How would it feel to not be bullied anymore?
+    - How would you feel if bullying stops?
+    - How would you feel when you achieve your goal?
+    - What would it feel like to achieve your goal?
+    - What would you feel if your problem is solved?
+    - How would that be for you if you are not bullied anymore?
+    - How could it help you if I called your school?
+
+- intent: confirm_goal_summary
+  examples: |
+    - If I understand correctly, you are being bullied at school and you want it to stop, is that correct?
+    - You want it to stop, is that correct?
+    - If I understand correctly, you want to feel safe and have fun with your friends at school, is that correct?
+    - If I understand correctly, you want to feel safe at school, is that correct?
+
+- intent: confirm_goal_collaborate
+  examples: |
+    - We can look for a different solution together. What do you think about that?
+    - I suggest that we look for a different solution together. What do you think?
+    - Shall we find a solution together?
+    - Shall we search for a solution together?
+    - What do you think of finding a solution together?
+    - What do you think of searching for a solution together?
+    - What do you think of looking for a solution together?
+    - Is it okay with you to look for a solution together?
+    - Is it okay with you to search for a solution together?
+    - Is it okay with you to find a solution together?
+    - Do you want to find a solution together?
+    - Shall we look for a solution together?
+    - Shall we look at how we can solve this together?
+    - Shall we look at how we can remedy this problem together?
+    - I suggest that we look for a solution together, do you agree?
+    - I suggest that we find a solution together, what do you think of that?
+    - Do you want to look for a solution together?
+    - We can look for a solution together. What do you think of what I say?
+    - Do you want us to look for a solution together?
+    - Shall we look for a different solution together?
+    - Do you think it is a good idea to look for a different solution together?
+    - Is it okay with you to find a different solution together?
+    - I suggest that we search for a different solution together.
+    - Unfortunately, that is not possible. Shall we look for a different solution together?
+    - I cannot do that, can we find a new solution together?
+    - Is it okay if we look for a solution together?
+    - We can think of different solutions together. What do you think of that?
+    - We can look for a different solution together. What do you think of that?
+    - Maybe we can look at what you can do together?
+    - Shall we talk about what can be done?
+    - Let's look together later at what you can do.
+    - I can discuss with you how you can talk at school.
+    - I can help you look at what can be done.
+    - How about we explore alternative solutions together? What are your thoughts on that?
+    - I propose that we collaborate to find a different solution. What do you think?
+    - Would you be open to finding a solution together?
+    - Shall we work together to search for a solution?
+    - What are your thoughts on finding a solution together?
+    - Are you comfortable with the idea of seeking a solution together?
+    - Are you willing to find a solution together?
+    - Shall we jointly seek a solution?
+    - Let's join forces and find a solution together. How does that sound?
+    - Would you like us to embark on the journey of finding a solution together?
+    - How about we explore options together?
+    - Let's explore how we can solve this problem together.
+    - Let's brainstorm together on how we can address this issue.
+    - I suggest that we tackle this issue together. Do you agree?
+    - I propose that we collaborate to find a solution. What are your thoughts on that?
+    - Are you interested in embarking on this search for a solution together?
+    - We can work together to find a solution. What are your thoughts on my suggestion?
+    - Would you like us to team up and find a solution together?
+    - Shall we explore alternative solutions together?
+    - Do you think it's a good idea to explore different solutions together?
+    - Are you open to the idea of finding a different solution together?
+    - I recommend that we jointly explore different solutions.
+    - Unfortunately, that's not possible. Shall we consider a different solution together?
+    - I'm unable to do that. Can we brainstorm and find a new solution together?
+    - Is it acceptable if we work together to find a solution?
+    - We can brainstorm different solutions together. What do you think of that?
+    - Let's collaborate to find an alternative solution together. What do you think?
+    - Perhaps we can discuss strategies for your communication at school.
+    - Shall we have a conversation about possible actions?
+    - Let's revisit the topic later and explore what you can do.
+    - I'm here to help you navigate your options and strategies.
+    - I can provide guidance on how to approach the situation at school.
+    - I can assist you in exploring available options.
+
+# phase 4
+- intent: request_goal_howkt
+  examples: |
+    - What can I do for you?
+    - How can I help you?
+    - What do you need from me?
+    - Is there anything I can do for you?
+    - Can I help you further?
+    - How can I solve your problem?
+    - Is there anything I can do to help you feel safe at school?
+    - Is there anything you expect from me?
+    - What would you like me to do?
+    - How can I ensure that the bullying stops?
+    - How can I ensure that you feel safe at school?
+    - What can I do so that you can go to school safely?
+    - Where can you use my help?
+    - How can I be helpful to you?
+    - How can I assist you in this conversation?
+    - How may I be of assistance to you?
+    - What support do you require from me?
+    - In what ways can I be helpful to you?
+    - Is there anything specific you would like me to do for you?
+    - How can I contribute to solving your problem?
+    - What measures can I take to ensure your safety at school?
+    - What are your expectations from me in this situation?
+    - What actions would you like me to take?
+    - How can I actively contribute to stopping the bullying?
+    - How can I create a safe environment for you at school?
+    - What steps can I take to ensure your secure attendance at school?
+    - Where do you feel you need my help the most?
+    - How can I best assist you in this matter?
+    - How can I support you during this conversation?
+
+- intent: request_goal_howchild
+  examples: |
+    - What can you do to stop it?
+    - What can you do yourself?
+    - What could you do yourself?
+    - What could you try yourself?
+    - What can you do to make yourself feel safe at school?
+    - Is there anything you can change to solve this problem?
+    - What could you do about it yourself?
+    - Do you know what you can do about it yourself?
+    - Do you think you could do something about it yourself?
+    - What can you do best?
+    - What else could you try?
+    - What can you do about this?
+    - What would you dare to do?
+
+- intent: request_unknown_how
+  examples: |
+    - What could you come up with for that?
+    - What could you do for this?
+    - What can you do to achieve this?
+    - How can you make sure this will work?
+    - What would you like to do to make it better?
+    - What can you do to make it stop?
+    - How can you achieve this goal?
+    - What can you do to solve this problem?
+    - How do you want to solve it?
+    - In what way would you solve it?
+    - How can you make it stop bullying?
+    - How can you make sure they won't bully you anymore?
+    - How can you stop bullying?
+    - How can you make sure you feel safe?
+    - How can you make sure you feel safe at school?
+    - What can you do to make yourself feel safe at school?
+    - Do you know how to solve this?
+    - Do you know how to solve this problem?
+    - How can you make sure you can safely go to school?
+    - What can you do to stop bullying?
+    - Do you know what you can do to stop bullying?
+    - Do you know what you can do to feel safe at school?
+    - Is there something you can do to stop bullying?
+    - Is there something you can do to feel safe at school?
+    - Is there something you can do to make sure you feel safe at school?
+    - Is there something you can do to make bullying stop?
+    - Is there something you can do that will make bullying stop?
+    - Is there something you want to do to make bullying stop?
+    - Is there something you want to do to feel safe at school?
+    - How can you make yourself feel safe at school again?
+    - How can you make sure you can safely go to school?
+    - Do you know how to achieve this goal?
+    - What can you do to achieve this?
+    - What can you do to achieve this goal?
+    - Can you think of something for this problem?
+    - Can you think of something to solve this problem?
+    - Can you think of something to stop bullying?
+    - What can you change to solve this?
+    - What could you do about it?
+    - What can you do against bullying?
+    - What can you do to feel safe at school?
+    - What can you do to make sure bullying stops?
+    - How can you make sure bullying stops?
+    - Do you know something you can do to solve this?
+    - Is there something you can try to solve the problem?
+    - Is there something you can try to make bullying stop?
+    - Is there something you can try to feel safe at school?
+    - Do you think you can do something about this?
+    - How do you think you could do this?
+    - How would you tackle this problem?
+    - How would you tackle bullying?
+
+# talking about potential confidant
+- intent: request_goal_howchild
+  examples: |
+    - how can you achieve your goal?
+    - what steps can you take to reach your goal?
+    - what are your plans to achieve your goal?
+    - how can you work towards your goal?
+    - what can you do to make progress towards your goal?
+    - what are some strategies you can use to achieve your goal?
+    - what are some ways you can stay motivated to achieve your goal?
+    - what are some obstacles you might face in achieving your goal, and how can you overcome them?
+
+- intent: request_confidant_who
+  examples: |
+    - is there someone else you can talk to?
+    - is there someone else you trust?
+    - can you discuss this problem with someone?
+    - do you have someone to talk to about this?
+    - is there someone else who understands you?
+    - do you think there is someone you can talk to about this?
+    - do you know someone who wants to listen to you about this problem?
+    - do you know someone who wants to listen to you?
+    - do you know someone who wants to listen to you about this?
+    - do you want to talk to someone else about this?
+    - are there other people you like to talk to?
+    - who can you talk to about this?
+    - who could you ask about this?
+    - who do you trust with this problem?
+    - is there someone you trust?
+    - can you talk to someone about this problem?
+    - who can you ask for advice?
+    - who do you usually talk to about these things?
+    - can you discuss this with someone?
+    - can you discuss this with someone from your school?
+    - who can you talk to?
+    - who could you tell and want to tell?
+    - who could you tell?
+    - who could you maybe tell?
+    - is there someone you can talk to well?
+    - could you talk to someone about this?
+    - who can you ask for advice?
+    - do you want to talk to someone about this?
+    - Is there anyone else you feel comfortable talking to?
+    - Is there someone else you trust enough to discuss this problem with?
+    - Do you have someone you can confide in about this?
+    - Is there a person you can turn to and share this with?
+    - Do you believe there is someone who understands your perspective?
+    - Have you considered reaching out to someone you can talk to about this?
+    - Do you know someone who is willing to lend an ear and listen to you regarding this problem?
+    - Do you have anyone in mind who would be willing to listen to you?
+    - Is there someone else you feel like discussing this with?
+    - Are there other individuals you usually turn to for support?
+    - Whom can you approach to seek advice on this matter?
+    - Who is your go-to person when it comes to discussing these things?
+    - Can you open up about this problem to someone you trust?
+    - Is there someone in your school whom you trust enough to confide in?
+    - Is there a person you can reach out to about this problem?
+    - Whom can you ask for guidance?
+    - Whom do you typically rely on to discuss these matters?
+    - Whom might you feel comfortable discussing this with?
+    - Is there someone with whom you have good communication and can talk to openly?
+    - Would you feel comfortable talking to someone about this?
+    - Whom can you seek advice from?
+    - Do you feel comfortable talking to someone about this?
+
+- intent: confirm_confidant_teacher
+  examples: |
+    - Could you talk to your teacher about this?
+    - Do you want to talk to your teacher?
+    - Do you dare to talk to your teacher?
+    - Can you talk to your teacher?
+    - Can you talk to your teacher about this?
+    - Do you want to tell your teacher that you are being bullied?
+    - Can you talk to Mrs. Ellie, your teacher?
+    - Do you want to talk to her?
+    - Would it be possible for you to speak with your teacher regarding this matter?
+    - Are you willing to have a conversation with your teacher?
+    - Are you comfortable approaching your teacher about this?
+    - Can you gather the courage to talk to your teacher?
+    - Are you capable of discussing this issue with your teacher?
+    - Do you feel ready to confide in your teacher about the bullying?
+    - Can you open up to Mrs. Ellie, your teacher?
+    - Are you interested in having a conversation with her?
+    - Are you willing to share your concerns with your teacher?
+    - Would you like to discuss this with your teacher, Mrs. Ellie?
+    - Can you find the strength to communicate with your teacher about the situation?
+    - Are you prepared to express your feelings to your teacher?
+    - Can you take the initiative to talk to your teacher about being bullied?
+    - Do you feel comfortable reaching out to your teacher regarding this matter?
+    - Are you ready to have a conversation with your teacher, Mrs. Ellie?
+    - Can you find the confidence to approach your teacher and share your experiences?
+
+- intent: confirm_confidant_parent
+  examples: |
+    - Can you talk to your parents about this?
+    - Can you discuss this with your parents?
+    - Can you talk to your parents?
+    - Do you want to talk to your parents?
+    - Have you considered talking to your parents about this?
+    - It might be helpful to discuss this with your parents. What do you think?
+    - Have you thought about sharing this with your parents?
+    - Would you feel comfortable talking to your parents about it?
+    - Do you think it would be a good idea to talk to your parents?
+    - Is reaching out to your parents something you would consider?
+    - Have you considered having a conversation with your parents about this issue?
+    - Talking to your parents could be a helpful step. What are your thoughts?
+    - Do you feel ready to discuss this with your parents?
+    - Would you like support in talking to your parents about it?
+    - Have you thought about opening up to your parents about what's happening?
+    - Do you think it would be beneficial to have a conversation with your parents?
+    - Is talking to your parents something you would like to explore?
+    - Are you comfortable with the idea of discussing this with your parents?
+    - Have you considered seeking guidance from your parents on this matter?
+    - Would you like assistance in approaching the conversation with your parents?
+    - Do you feel it would be beneficial to involve your parents in this situation?
+    - Is talking to your parents something you feel ready for?
+    - Have you thought about sharing your feelings with your parents?
+    - Would you like to explore the option of talking to your parents about it?
+    - Are you open to the idea of discussing this with your parents?
+    - Do you feel supported enough to talk to your parents about it?
+    - Would you like some guidance on how to approach the conversation with your parents?
+    - Is discussing this with your parents something you feel comfortable with?
+    - Have you thought about seeking advice from your parents regarding this issue?
+    - Are you considering reaching out to your parents for help and support?
+
+- intent: request_confidant_when
+  examples: |
+    - When could you talk to your teacher?
+    - When could you talk to your female teacher?
+    - At what time would you want to tell your teacher that you are being bullied?
+    - At what time would you want to tell her that you are being bullied?
+    - Would you dare to tell her during the upcoming conversation?
+    - When can you talk to her?
+    - When can you talk to your female teacher?
+    - When can you talk to your teacher?
+    - When will you speak to Mrs. Ellie again?
+    - When will you speak to your female teacher again?
+    - When will you tell her?
+    - When would be a convenient time for you to speak with your teacher?
+    - When would you feel comfortable discussing the matter with your female teacher?
+    - At what time would you like to inform your teacher about the bullying?
+    - At what time would you like to share with her that you are being bullied?
+    - Are you willing to bring it up during our upcoming conversation?
+    - When are you available to talk to her?
+    - When would it be possible for you to speak with your female teacher?
+    - When is a good time for you to have a conversation with your teacher?
+    - When do you plan to have another discussion with Mrs. Ellie?
+    - When do you plan to speak to your female teacher again?
+    - When do you intend to tell her?
+
+- intent: request_confidant_feeling
+  examples: |
+    - what would it feel like to tell her?
+    - how would it feel to talk to Mrs. Ellie?
+    - how would it feel to tell Mrs. Ellie?
+
+- intent: request_confidant_why
+  examples: |
+    - why don't you feel comfortable talking to your teacher?
+    - why don't you feel comfortable talking to Mrs. Ellie?
+
+- intent: request_confidant_how
+  examples: |
+    - how could you make yourself feel comfortable talking to your teacher?
+    - how could you make yourself feel comfortable talking to Mrs. Ellie?
+    - how will you tell her?
+    - how can you tell her?
+    - how can you feel comfortable talking to Mrs. Ellie?
+
+- intent: inform_confidant_help
+  examples: |
+    - she could listen to your story and support you
+    - she can support you
+    - she can listen to you and support you
+    - together you can find a solution
+    - you can find a solution together
+    - address bullying in the classroom
+    - she can listen to you
+    - I think it would be good to talk to someone you trust
+    - I think it would be good to talk to someone you trust
+    - I think it would be good for you to talk to your teacher
+    - she can at least listen to you
+    - your teacher can listen to you, for example
+    - your teacher can listen to you
+    - just like you told me
+    - she can help you figure out what to do
+    - she can help you
+    - she can help you stop the bullying
+    - Mrs. Ellie can help you
+    - so that you feel safe again at school
+    - she can help you feel safe again at school
+    - she can talk to you about it
+    - maybe you can ask Mrs. Ellie what she can do
+    - your teacher won't tell anyone else
+    - maybe she can talk to the bullies to stop the bullying
+    - but a teacher can do something
+    - your teacher will really listen to you
+    - your teacher can listen to you
+    - in any case, it can help to talk about it
+    - she can work with you to find a solution
+    - She can lend an empathetic ear and offer you support.
+    - She is there to support you in your journey.
+    - Together, you can collaboratively find a solution.
+    - It's possible to find a solution when working together.
+    - Addressing bullying in the classroom is important.
+    - She can actively listen to your concerns.
+    - It would be beneficial to confide in someone you trust.
+    - Talking to a trusted individual could be helpful.
+    - It would be beneficial for you to have a conversation with your teacher.
+    - She can provide a listening ear, just as you shared with me.
+    - Your teacher can lend a helping hand.
+    - Your teacher can listen to your experiences.
+    - Your teacher can provide a safe space for you to express yourself.
+    - She can assist you in figuring out appropriate actions.
+    - She can support you throughout the process.
+    - Mrs. Ellie is there to help you address and stop the bullying.
+    - She can aid in restoring your sense of safety at school.
+    - Mrs. Ellie can engage in a conversation with you about the situation.
+    - You can approach Mrs. Ellie to discuss potential actions.
+    - Rest assured that your teacher will maintain confidentiality.
+    - She may consider communicating with the bullies to address the issue.
+    - A teacher has the ability to intervene and make a difference.
+    - Your teacher is genuinely committed to listening to you.
+    - Your teacher is willing to listen attentively.
+    - Sharing your experiences can be beneficial in any case.
+    - She can work hand in hand with you to find an effective solution.
+
+- intent: inform_confidant_say
+  examples: |   
+    - You can tell her the same thing you told me.
+    - Maybe you should tell the teacher that.
+    - Just like you told me,
+    - that you're being bullied and want to feel safe.
+    - that you're being bullied.
+    - You can tell her that you're being bullied.
+    - that you want to feel safe.
+    - that you don't want to be bullied anymore.
+    - that you're scared.
+    - that you want help.
+    - You can relay the same information to her as you did to me.
+    - It might be a good idea to inform the teacher about it.
+    - Just like you shared with me,
+    - that you're experiencing bullying and seeking a sense of safety.
+    - that you're facing bullying.
+    - You can let her know that you're being bullied.
+    - that you desire a sense of security.
+    - that you no longer want to be subjected to bullying.
+    - that you're feeling scared.
+    - that you're seeking assistance.
+
+- intent: request_confidant_say
+  examples: |
+    - What would you like to tell Miss Ellie?
+    - What would you like to tell the teacher?
+    - What do you want to tell her?
+    - What are you going to say?
+
+- intent: confirm_confidant_summary
+  examples: |
+    - Shall we agree that you will talk to your teacher about your situation?
+    - Shall we agree that you will talk to your teacher?
+    - Shall we agree that you will talk to Miss Ellie tomorrow about your situation?
+    - Shall we agree that you will talk to Miss Ellie tomorrow?
+    - Shall we agree that you will talk to your teacher?
+
+# phase 5
+- intent: request_chitchat_end
+  examples: |
+    - I suggest we end the conversation now.
+    - I suggest we end the conversation now so you can start working on it.
+    - Let's agree that you'll just come back to us if things don't go well. Okay?
+    - If you want to talk again later, you're always welcome to come back.
+    - You're always welcome to come back if you want to talk again.
+    - You're welcome to come back at any time if you want to talk.
+    - You're always welcome to come back at another time.
+
+- intent: confirm_chitchat_satisfaction
+  examples: |
+    - How did you find the conversation?
+    - How did you find this conversation?
+    - Did you find the conversation helpful?
+    - Did this conversation help you?
+    - Do you feel better after this conversation?
+    - Are you glad that you reached out?
+    - Do you feel a bit better now that you've shared it with me?
+    - Do you feel a bit better because of this conversation?
+
+- intent: request_chitchat_goodbye
+  examples: |
+    - Bye
+    - Have a nice evening in advance!
+    - Have a great day ahead.
+    - Good luck!
+    - Have a pleasant evening.
+    - Goodbye
+    - I wish you a wonderful day.
+    - Until next time.
+
+# negative intents
+- intent: confirm_chitchat_satisfaction
+  examples: |
+    - How did you find the conversation?
+    - How did you like this conversation?
+    - Did you find the conversation helpful?
+    - Did this conversation help you?
+    - Do you feel better after this conversation?
+    - Are you glad you reached out?
+    - Do you feel better now that you've told me about it?
+    - Do you feel better because of this conversation?
+
+- intent: request_chitchat_goodbye
+  examples: |
+    - Goodbye
+    - Have a good evening!
+    - Have a nice day
+    - Good luck!
+    - Good evening
+    - See rasa run -m models --enable-api --cors  "*"
+    - I wish you a nice day
+    - Until next time
+
+# negative intents
+- intent: ack_unknown_guilt
+  examples: |
+    - It's all your fault
+    - You're overreacting 
+    - You are the problem
+    - It's your fault
+    - Yes, that's not smart of you
+    - I understand why they bully you
+    - You're solely to blame for this.
+    - You're making a big deal out of nothing.
+    - The root of the problem lies with you.
+    - The responsibility falls entirely on you.
+    - That wasn't a wise decision on your part.
+    - I can comprehend why they choose to bully you.
+    - This is entirely on you, no one else.
+    - You're exaggerating the situation.
+    - You're the source of the issue.
+    - You brought this upon yourself, unfortunately.
+    - That was not a smart move on your part.
+    - I can see why they target and mistreat you.
+
+- intent: ack_unknown_taunt
+  examples: |
+    - haha
+    - lol
+    - loser
+    - cancer
+    - idiot
+    - how stupid of you
+    - I would bully you too
+    - that obviously won't work
+    - what a stupid idea
+    - bad idea
+    - bad plan
+    - how dumb of you
+    - how dumb of you
+    - I'm going to tell your parents
+    - you're so dumb
+    - stupid
+    - where do you live?
+    - who are your parents?
+    - what are your parents' names?
+    - what school do you go to?
+
+# TODO: meta-communication (future work)

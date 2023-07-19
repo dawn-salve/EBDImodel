@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@200&display=swap" >
+
+    <script>
+      function handleLanguageSelection() {
+        var languageSelect = document.getElementById('language-select');
+        var selectedLanguage = languageSelect.value;
+
+        // Redirect the user to the corresponding HTML file
+        if (selectedLanguage === 'en') {
+          window.location.href = 'index_en.html';
+        } else if (selectedLanguage === 'nl') {
+          window.location.href = 'index_nl.html';
+        }
+      }
+    </script>
+
+    <style>
+      
+      * {box-sizing: border-box;}
+      
+      body { 
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      .instruction h3 { 
+        margin: 0;
+        color: white;
+        font-family: 'Anton', sans-serif; 
+        font-size: 25px; 
+      }
+
+      .instruction p, li {
+        color: white;
+      }
+
+
+      .header {
+        grid-area: header;
+        background-color: #b88be2;
+        padding: 2px;
+        text-align: center;
+        height: 20vh;
+      }
+
+      .header a {
+        float: left;
+        color: white;
+        text-shadow: black;
+        text-align: center;
+        padding: 15px;
+        font-size: 20px; 
+        line-height: 25px;
+        border-radius: 4px;
+      }
+
+      .header h1 {
+        float: center;
+        color: white;
+        text-shadow: black;
+        text-align: center;
+        padding: 60px;
+        font-size: 40px; 
+        line-height: 25px;
+        border-radius: 4px;
+        font-family: 'Anton', sans-serif; 
+      }
+
+      .header-right {
+        float: right;
+      }
+
+      @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      
+      .header-right {
+        float: none;
+      }
+    }
+
+      .grid-container {
+        display: grid;
+        grid-template-areas: 
+          'header header'
+          'left right';
+        grid-template-columns: 500px 1fr;  
+      } 
+
+      .left,
+      .right {
+        padding: 10px;
+        height: 90vh;
+        background-color: #b88be2;
+      }
+
+      .left {
+        grid-area: left;
+      }
+
+      .right {
+        grid-area: right;
+      }
+
+      .centered-text {
+        color: white;
+      }
+
+      .instruction {
+        margin: 35px;
+        
+      }
+      
+
+      @media (max-width: 600px) {
+        .grid-container  {
+          grid-template-areas: 
+            'header header header header header header' 
+            'left left left left left left' 
+            'middle middle middle middle middle middle' 
+            'right right right right right right' 
+            'footer footer footer footer footer footer';
+        }
+      } 
+    </style>
+
+    <title>Chatbot Prototype</title>
+
+  </head>
+
+  <body>
+    <style>
+      .rw-conversation-container .rw-header{background-color: #00dba3;}
+      .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: slategrey;} 
+      .rw-conversation-container .rw-sender .rw-send{color: slategray;}
+      .rw-launcher{background-color: #00dba3;}
+      .rw-conversation-container .rw-replies { display:block }
+    </style>
+
+    <select id="language-select" onchange="handleLanguageSelection()">
+      <option value="en">English</option>
+      <option value="nl">Dutch</option>
+    </select>
+
+    <script>!(function () {
+      let e = document.createElement("script"),
+        t = document.head || document.getElementsByTagName("head")[0];
+      (e.src =
+        "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+        (e.async = !0),
+        (e.onload = () => {
+          window.WebChat.default(
+            {
+              customData: { language: "en"},
+              // socketUrl: "http://dktchatbot.westeurope.cloudapp.azure.com",    //using azure server
+              socketUrl: "http://localhost:5005",   //using localhost
+              socketPath: "/socket.io/",
+              title: "Chat with",
+              showFullScreenButton: true,
+              inputTextFieldHint:"Type a message...",
+              profileAvatar: "images/bot_icon.png",
+              params: {
+                storage: "session",
+              }
+            },
+            null
+          );
+        }),
+        t.insertBefore(e, t.firstChild);
+    })();
+    </script>
+    
+    <div class="grid-container">
+
+      <div class="header">
+        <a>
+          <img alt="logo" src="images/kt_logo.png" width="210" height="180">
+        </a>
+        <h1>CHATBOT PROTOTYPE</h1>
+      </div>
+
+      <div class="left">
+
+        <div class="instruction">
+
+          <h3>WELCOME</h3>
+          <p>
+          With this training environment, you can practice the Five-Phase Conversation Model. The simulated child will share about his situation, and your goal is to engage in a conversation with him following the conversation model.
+          </p>
+
+          <p>
+          <b>Note:</b>
+          The simulated child cannot answer questions on other topics. Make sure your answers align with the subject of the conversation.
+          </p>
+
+        <h3>INSTRUCTIONS</h3>
+        <ul>
+          <li>In the bottom right corner, you will see a chat icon. Click on it to start a conversation with the simulated child.</li>
+          <li>If you see dots, it means the simulated child is typing. Please wait until he finishes.</li>
+          <li>Type "Bye" to end the conversation. This will stop the chat.</li>
+          <li>At the end, you will receive a transcript of this conversation for reflection.</li>
+        </ul>
+      </div>
+      
+      </div>
+
+      <div class="right">
+        <div class="centered-text">
+          <h2>Five-Phase Model</h2>
+          <video controls width="65%">
+            <source src="FPM.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <h3>References</h3>
+          <ul>
+            <li>[1] Sindahl, T. N. (2011). Chat Counselling for Children and Youth: A Handbook. Copenhagen: Børns Vilkår.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

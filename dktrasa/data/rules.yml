@@ -1,0 +1,15 @@
+version: "2.0"
+
+rules:
+
+- rule: react to reminder
+  steps:
+  - intent: EXTERNAL_reminder
+  - action: action_react_to_reminder
+
+- rule: print bdi
+  steps:
+  - intent: request_chitchat_goodbye
+  - action: action_use_bdi
+  - action: action_get_bdi
+  - action: action_forget_reminders
